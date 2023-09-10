@@ -1,0 +1,94 @@
+.files-list {
+  flex: 1;
+  color: white;
+}
+
+.display-flex {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.file-cont {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid grey;
+}
+
+.folder {
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  color: white;
+  gap: 1rem;
+}
+
+.active,
+.folder:hover {
+  background-color: #37373c;
+  position: relative;
+  z-index: 0;
+}
+
+.folder.active::before,
+.folder:hover::before {
+  content: "";
+  background-color: #37373c;
+  position: absolute;
+  height: 100%;
+  width: var(--active-width);
+  left: var(--active-left);
+  z-index: -1;
+  top: 0;
+}
+
+.folder-child {
+  padding-left: 1rem;
+}
+
+.collapsed {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.context-menu {
+  background-color: rgba(48, 49, 49, 0.8);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: fixed;
+  z-index: 2;
+}
+
+.search-bar {
+  padding: 1rem;
+  display: flex;
+}
+
+.search-bar > input {
+  background-color: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  padding: 8px;
+  outline: none;
+  color: white;
+  flex: 1;
+}
+
+.search-bar > input:focus {
+  border: 1px solid #377dce;
+}
+
+.context-menu > div {
+  padding: 0.5rem;
+  color: white;
+}
+
+.context-menu > div:hover {
+  background-color: gray;
+}
+
+.context-menu-container {
+  width: fit-content;
+}
