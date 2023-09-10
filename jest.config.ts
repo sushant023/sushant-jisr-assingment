@@ -204,6 +204,7 @@ const config: Config = {
   // Jest transformations -- this adds support for TypeScript
   // using ts-jest
   transform: {
+    "^.+\\.ts?$": "ts-jest",
     "^.+\\.tsx?$": "ts-jest",
     "^.+\\.(js|jsx)$": "babel-jest",
   },

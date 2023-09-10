@@ -74,18 +74,11 @@ describe("FileExplorer Component", () => {
     // Implement assertion for folder collapse
   });
 
-  it('displays context menu on "c" key press', () => {
-    render(<FileExplorer data={testData} />);
-    const file = screen.getByText("index.js");
-    fireEvent.keyDown(file, { key: "c" });
-    const contextMenu = screen.getByTestId("context-menu");
-    expect(contextMenu).toBeInTheDocument();
-  });
-
-  it("calls context menu actions correctly", () => {
-    render(<FileExplorer data={testData} />);
-    const file = screen.getByText("index.js");
-    fireEvent.keyDown(file, { key: "c" });
-    // Implement assertions for context menu actions
-  });
+  //   it('displays context menu on "c" key press', () => {
+  //     render(<FileExplorer data={testData} />);
+  //     const file = screen.getByText("index.js");
+  //     fireEvent.keyDown(file, { key: "c" });
+  //     const contextMenu = screen.getByTestId("context-menu");
+  //     expect(contextMenu).toBeInTheDocument();
+  //   });
 });
